@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCode Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            background-color: #121212;
+            background-image: url('https://images.pexels.com/photos/1102797/pexels-photo-1102797.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: rgba(3, 6, 44, 0.9);
+            color: rgb(255, 255, 255);
+            padding: 20px 0;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .video-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+        iframe {
+            display: block;
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(30, 30, 30, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+        .instructions {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: rgba(50, 50, 50, 0.8);
+            border-radius: 8px;
+            border-left: 4px solid #282930;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #a5d6a7;
+        }
+        .instructions p {
+            margin: 10px 0;
+        }
+        .instructions ul {
+            margin: 10px 0 0;
+            padding-left: 20px;
+        }
+        .instructions ul li {
+            margin: 5px 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #2c2c2c;
+            color: #ffffff;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        button {
+            background-color: #3949ab;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0fb948;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: rgba(10, 15, 78, 0.9);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AutoCode Solutions</h1>
+        <p>Seu parceiro em soluções de automação e tecnologia.</p>
+    </header>
+
+    <!-- Video Container -->
+    <div class="video-container">
+        <iframe 
+            id="video" 
+            src="https://www.youtube.com/embed/AbdeRZskCeU?autoplay=1&mute=1" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Form Container -->
+    <div class="container">
+        <!-- Instructions Section -->
+        <div class="instructions">
+            <h3>Como pedir um orçamento?</h3>
+            <ul>
+                <li>✅ <strong>Precisa de um bot (robô)?</strong></li>
+                <p>Descreva em detalhes o que precisa ser automatizado, incluindo os passos manuais que gostaria de substituir.</p>
+                <p>Mencione o site e os processos que deseja automatizar.</p>
+                <li>✅ <strong>Precisa de um sistema?</strong></li>
+                <p>Descreva a visão do sistema ou as funcionalidades que imagina serem necessárias.</p>
+                <p>Por exemplo: "Quero um sistema para fazer X, Y, Z. Esse sistema deve me permitir realizar A, B, C, D."</p>
+            </ul>
+        </div>
+
+        <h2>Entre em Contato</h2>
+        <p>Tem um projeto ou precisa de assistência? Envie suas informações e nós entraremos em contato em breve!</p>
+
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Seu Nome</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Seu Email</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+            </div>
+
+            <h3>Detalhes da Automação</h3>
+
+            <div class="form-group">
+                <label for="business-type">Tipo de Negócio</label>
+                <input type="text" id="business-type" name="business-type" placeholder="Exemplo: Manufatura, Varejo, TI" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tasks">Tarefas a Automatizar</label>
+                <textarea id="tasks" name="tasks" placeholder="Descreva as tarefas que você deseja que o robô execute" required></textarea>
+            </div>
+
+            <button type="button" onclick="redirectToWhatsApp()">Enviar Solicitação</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 AutoCode Solutions. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script>
+        function redirectToWhatsApp() {
+            // Obtendo o valor do campo tasks
+            var tasks = document.getElementById('tasks').value.trim();
+
+            // Validando o campo
+            if (!tasks) {
+                alert("Por favor, preencha o campo de tarefas antes de enviar.");
+                return;
+            }
+
+            // Exibindo mensagem ao usuário
+            alert("Você está sendo redirecionado ao nosso atendente!");
+
+            // Criando a mensagem com codificação
+            var message = encodeURIComponent(
+                "🤓 Gostaria de saber mais sobre as tarefas a automatizar:\n\n" +
+                "Tarefas a Automatizar: " + tasks
+            );
+
+            // Número de telefone com código do país e DDD
+            var phoneNumber = '558291217317'; // Substitua pelo seu número
+
+            // Gerando a URL para redirecionamento
+            var url = "https://wa.me/" + phoneNumber + "?text=" + message;
+
+            // Abrindo o link em uma nova aba/janela
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
